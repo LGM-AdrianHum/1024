@@ -1,0 +1,33 @@
+﻿<Window x:Class="_1024.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="1024" Height="555" Width="525"
+        KeyDown="Window_KeyDown"
+        ResizeMode="NoResize">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--Score And other-->
+        <Grid Grid.Row="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Background="AntiqueWhite">Your Score:</TextBlock>
+            <TextBlock x:Name="displayedScore" Grid.Row="0" Grid.Column="1" Background="AntiqueWhite">0</TextBlock>
+        </Grid>
+        <!--Playng field-->
+        <Canvas x:Name="playngField" Grid.Row="1" Background="White" Opacity="1" Width="495" Height="500">
+        </Canvas>
+    </Grid>
+
+</Window>
